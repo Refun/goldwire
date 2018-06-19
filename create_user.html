@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />  
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Goldwire</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="summernote/font/summernote-bs4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/style.css">
+
+    
+</head>
+
+
+<body>
+
+  <header class="d-flex justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
+            <img class="align-top" src="img/icon.png" width="20" height="20"  alt="">
+        </a>
+
+        
+
+        <a class="navbar-brand-name" href="/" style="padding-right: 16px;text-align:center;line-height: 18px;">
+
+            <div  style="color:#3B5998;">
+                Goldwire
+            </div>
+            <div class="chinese ">金电报</div>
+        </a>
+
+        
+        <div>
+            <button class="navbar-toggler collapsed align-bottom" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="material-icons navbar-toggle-icon align-bottom" style="font-size:26px;margin-top:1px;">more_vert</i>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbarNav" style="">
+            <ul class="navbar-nav mx-auto">
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                    <li class="nav-item mr-sm-2 active">
+                        <a class="nav-link" href="/">Feed</a>
+                    </li>
+                    <li class="nav-item mr-sm-2 ">
+                        <a class="nav-link" href="/recent_history">Activity</a>
+                    </li>
+                    <li class="nav-item mr-sm-2 ">
+                        <a class="nav-link" href="/users_manual/">User’s Manual</a>
+                    </li>
+
+                    
+                        <li class="nav-item mr-sm-2 ">
+                            <a class="nav-link" href="/create_user/">Create User</a>
+                        </li>
+                        <li class="nav-item mr-sm-2 ">
+                            <a class="nav-link" href="/connect_dashboard/">Connect Dashboard</a>
+                        </li>
+                    
+
+                
+
+                
+
+                    <li class="nav-item mr-sm-2 ">
+                        <a class="nav-link text-capitalize" href="/logout">Logout</a>
+                    </li>
+
+                
+
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+
+   <div class="container">
+        <div class="row justify-content-md-center" style="margin-right:0px;margin-left:0px;">
+            <div class="col-xl-6 col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-8 rounded-0 login left-right-border-null">
+                            <div class="rounded-0">
+                                <div class="card-body">
+                                    <form method="POST">
+                                        <input type="hidden" name="csrfmiddlewaretoken" value="5KpR0ecxjyH0Jb3YZbRLxfJMh58NLUkDxVtYPB1LJeiAP2Ps4eV42m3GoGJVEAaW">
+                                        <div class="form-group">
+                                            <label for="id_first_name" style="text-transform:capitalize;">First name</label>
+                                            <input type="text" class="form-control" name="first_name" id="id_first_name" required="true" value="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="id_last_name" style="text-transform:capitalize;">Last name</label>
+                                            <input type="text" class="form-control" name="last_name" id="id_last_name" required="true" value="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="id_email" style="text-transform:capitalize;">Email</label>
+                                            <input type="email" class="form-control" name="email" id="id_email" required="true" value="">
+                                        </div>
+
+                                                
+                                        <div class="form-group">
+                                            <input type="hidden" class="form-control" name="password1" id="id_password1" required="true" value="jlvhzn">
+                                        </div>
+                                            
+                                            
+                                        <div class="form-group">
+                                            <input type="hidden" class="form-control" name="password2" id="id_password2" required="true" value="jlvhzn">
+                                        </div>   
+
+                                        <div class="form-group">
+                                            <label for="id_group"><label for="id_group">Role:</label></label>
+                                            <select name="group" id="id_group" class="form-control">
+                                                
+                                                    <option value="" selected="">---------</option>
+                                                
+                                                    <option value="1">Admin</option>
+                                                
+                                                    <option value="2">Moderator</option>
+                                                
+                                                    <option value="3">Investor</option>
+                                                
+                                                    <option value="4">Regular</option>
+                                                
+                                            </select>
+                                        </div>
+                                       <button type="submit" class="btn btn-dark btn-sm">Submit</button>
+                                    </form> <!-- form -->
+                                </div> <!-- card-body -->
+                            </div><!--  rounded-0 -->
+                     </div> <!-- col-md-8 rounded-0 login left-right-border-null -->
+                </div><!--  row justify-content-center align-items-center -->
+            </div> <!-- col-md-12 col-xl-6 -->
+        </div> <!-- row -->
+    </div> <!--  container -->
+
+
+<footer class="footer-bottom navbar-fixed-bottom" style="margin-top: 45px;background-color: #363636;padding: 30px 0px 20px
+">
+    <div class="container">
+      <div class="row justify-content-between">
+    <div class="col-lg-12 col-xs-12">
+       <p class=" post-title text-center" style="color: #c7c7c7">Copyright 2018, All rights reserved by GOLDWIRE </p>
+    </div>
+   
+  </div>
+  </div>      
+</footer>
+
+
+
+    <!-- All JS libraries -->
+    <!-- JQUERY SLIM JS -->
+    <script src="libraries/jquery/jquery-3.2.1.slim.min.js"></script>
+    <!-- JQUERY Popper JS -->
+    <script src="libraries/jquery/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Summernote bs4 JS -->
+    <script src="libraries/summernote/summernote-bs4.js"></script>
+    <!-- manin JS -->
+    <script src="js/main.js"></script>
+    <!-- Summernote cleaner JS -->
+    <script src="js/summernote-cleaner.js"></script>
+    <script type="text/javascript">
+
+                    $(document).ready(function() {
+
+                        $(function () {
+
+                            var randomstring = Math.random().toString(36).slice(-6);
+
+                            $('#id_password1').val(randomstring);
+                            $('#id_password2').val(randomstring);
+
+                        });
+
+
+                    });
+
+     </script>
+</body>
+
+
+</html>
