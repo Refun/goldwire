@@ -5,8 +5,45 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
+.date{
+  position: absolute;
+   right: 61px;
+   bottom: 7px;
+}
+/* no-gutters Class Rules */
+.row.no-gutters {
+   margin-right: 0;
+   margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+   padding-right: 0;
+   padding-left: 0;
+}
+select.custom-select.custom-select-sm{
+  margin-left: 10px;
+  color: #bababa;
+  border: 1px solid #272727;
+}
+.custom-select:focus {
+    border-color: #bababa;
+    outline: 0;
+    box-shadow: none;
+}
 .f-14{
   font-size: 14px;
+}
+.pl-17{
+  padding-left: 10px;
+}
+.close{
+ color: #c7c7c8;
+ text-shadow: none;
+ transition: .3s;
+}
+.close:focus, .close:hover{
+  text-shadow: none;
+  color: #c7c7c8!important;
 }
 .animation{
       -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
@@ -20,8 +57,9 @@ body {
     border-top-color: #0e0e0e!important;
 }
 .color-bg{
-    background-color: #272727!important;
-    /* background-size: cover; */
+     background-color: #272727!important; 
+     background-size: cover; 
+    height:100vh;
 }
 .color-white{
   color: #fff!important;
@@ -36,6 +74,7 @@ body {
 }
 .color-l-bg{
     background-color: #0e0e0e!important;
+    color: #ff;
 }
 .top-header{
    background-color: #0e0e0e!important;
@@ -131,7 +170,8 @@ input[id='c-field']{
     outline: 0;
     background-color: #0e0e0e!important;
     padding: 4px;
-        color: #bababa;
+    color: #bababa;
+    width: 100%;
 }
 .col-form-label{
     color: #a9a9a9!important;
@@ -175,8 +215,10 @@ input[id='c-field']{
     color: #fff;
     display: block;
     height: 34px;
-    width: 148px;
+    width: 100%;
+    padding: 2px;
     overflow: hidden;
+    font-size: 14px;
     text-align: center;
     vertical-align: middle;
 }
@@ -227,6 +269,9 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
     border: none;
    
 }
+.main{
+  height: 100vh;
+}
 .bg-b{
     padding: 0px .5rem;
     background-color: #272727;
@@ -249,10 +294,11 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
     font-size: 14px;
 }
 .btn-send{
-    padding-left: 8px;
-    padding-right: 8px;
-
-    border-color: #008ddd;
+        padding: 4px 7px;
+        height: 35px;
+        border-color: #008ddd;
+        border-color: #008ddd;
+        margin-left: -4px;
 }
 .dropdown-item:focus, .dropdown-item:hover {
     color: #fff;
@@ -297,7 +343,7 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
     color: #fff;
 }
 .date{
-        width: 105px;
+    width: 105px;
     color: #878787;
     font-size: 72%;
     float: right;
@@ -343,6 +389,7 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
 .sp-padd{
      padding: 0px 16px;
      font-size: 14px;
+     height: 100vw;
 }
 .main .list-group-item.active{
     background-color: #202225!important;
@@ -398,8 +445,8 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
 }
 
 .scrollable-panel{
-      height: 120px;
-            overflow-y: scroll;
+      height: auto;
+      overflow-y: scroll;
       }
 .top{
 
@@ -415,17 +462,20 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
         -o-transform: translate3d(0%, 0, 0);
         transform: translate3d(0%, 0, 0);
         right: 400px;
+
     }
         .modal.right .modal-content {
         height: 100%;
         overflow-y: scroll;
         position: fixed;
+
         background-color: #272727;
         -webkit-box-shadow: 0 0 30px 0 rgba(0,0,0,.5);
         -moz-box-shadow: 0 0 30px 0 rgba(0,0,0,.5);
         box-shadow: 0 0 30px 0 rgba(0,0,0,.5);
         border: 0px;
         top: 1px;
+         border-radius: 0px;
     }
 
         .modal.right.fade .modal-dialog {
@@ -445,9 +495,14 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
 }
 
 .ck.ck-editor__main>.ck-editor__editable{
-     background-color: #0e0e0e!important;
+  background-color: #0e0e0e!important;
   color: #c7c7c8;
   height: 100vw;
+  border: none;
+}
+.ck.ck-button:not(.ck-disabled):active, a.ck.ck-button:not(.ck-disabled):active {
+    background: var(--ck-color-button-default-active-background);
+    box-shadow: inset 0 2px 2px var(--ck-color-button-default-active-shadow);
 }
 button.ck.ck-button.ck-off {
     color: #fff;
@@ -455,6 +510,7 @@ button.ck.ck-button.ck-off {
 
 .ck.ck-toolbar{
    background: #2d2d2d!important;
+   border: none!important;
  
 }
 .feed-body:hover{
@@ -463,9 +519,9 @@ button.ck.ck-button.ck-off {
 
 @media (min-width: 992px){
   .c-left-15{
-     margin-left: 16%!important;
-     max-width: 84%!important;
-     flex:  0 0 84%!important;
+     margin-left: 14%!important;
+     max-width: 86%!important;
+     flex:  0 0 86%!important;
     }
  .main .c1{
   max-width: 16%!important;
