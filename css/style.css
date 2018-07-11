@@ -5,6 +5,15 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
+.f-14{
+  font-size: 14px;
+}
+.animation{
+      -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
 .section{
     border-left-color: #0e0e0e!important;
     border-right-color: #0e0e0e!important;
@@ -15,7 +24,10 @@ body {
     /* background-size: cover; */
 }
 .color-white{
-  color: #fff;
+  color: #fff!important;
+}
+.color-l-white{
+  color: #c7c7c8;
 }
 .m-bottom-icon{
   color: #bababa;
@@ -163,7 +175,7 @@ input[id='c-field']{
     color: #fff;
     display: block;
     height: 34px;
-    width: 154px;
+    width: 148px;
     overflow: hidden;
     text-align: center;
     vertical-align: middle;
@@ -191,6 +203,13 @@ input[id='c-field']{
 .btn-blue:focus{
     box-shadow: none!important;
 }
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+.show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0px;
+    background: #272727!important;
+}
 .dropdown-toggle::after{
     position: relative;
     left: 0px;
@@ -203,9 +222,10 @@ input[id='c-field']{
 }
 
 button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
-    padding: 0px .5rem;
+    padding: 0px 1.0rem;
     background-color: #208aed;
     border: none;
+   
 }
 .bg-b{
     padding: 0px .5rem;
@@ -213,16 +233,20 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
     color: #bababa;
 }
 .dropdown-menu.show{
-    background: #181818;
+    background: #272727;
     position: absolute;
     transform: translate3d(0px, 35px, 0px)!important;
     top: 0px;
     left: 0px;
-    will-change: transform
+    will-change: transform;
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 4px 8px rgba(0,0,0,.5);
+    box-shadow: 0 4px 8px rgba(0,0,0,.5);
 }
 .dropdown-item{
     color: #c7c7c8;
-    padding: .25rem 2.5rem;
+    padding: .25rem 2.7rem;
+    font-size: 14px;
 }
 .btn-send{
     padding-left: 8px;
@@ -293,6 +317,18 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
 }
 .post-content .list-group-item:hover{
     background-color: #1d1d1d!important;
+}
+.post-content .list-group-item .content_icons .fas{
+    visibility: hidden;
+    margin-left: 4px;
+    color: #6e6e6e;
+}
+.post-content .list-group-item:hover .content_icons .fas{
+    visibility: visible;
+    font-size: 12px;
+}
+.post-content .list-group-item .content_icons .fas:hover{
+   color: #AEAEAE;
 }
 .post-content a.list-group-item{
       border-bottom: #333 1px solid;
@@ -378,6 +414,7 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
         -ms-transform: translate3d(0%, 0, 0);
         -o-transform: translate3d(0%, 0, 0);
         transform: translate3d(0%, 0, 0);
+        right: 400px;
     }
         .modal.right .modal-content {
         height: 100%;
@@ -398,7 +435,8 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
          -o-transition: opacity 0.3s linear, right 0.3s ease-out;
          transition: opacity 0.3s linear, right 0.3s ease-out;
     }
-    
+
+
     .modal.right.fade.in .modal-dialog {
         right: 0;
     }
@@ -406,17 +444,36 @@ button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split{
     margin-top: 55px;
 }
 
+.ck.ck-editor__main>.ck-editor__editable{
+     background-color: #0e0e0e!important;
+  color: #c7c7c8;
+  height: 100vw;
+}
+button.ck.ck-button.ck-off {
+    color: #fff;
+}
+
+.ck.ck-toolbar{
+   background: #2d2d2d!important;
+ 
+}
+.feed-body:hover{
+  
+}
+
 @media (min-width: 992px){
   .c-left-15{
-     margin-left: 15%!important;
-     max-width: 85%!important;
-     flex:  0 0 85%!important;
+     margin-left: 16%!important;
+     max-width: 84%!important;
+     flex:  0 0 84%!important;
     }
  .main .c1{
-  max-width: 15%!important;flex: 0 0 15%!important;
+  max-width: 16%!important;
+  flex: 0 0 16%!important;
  }
  .main .c2{
-   max-width: 85%!important;flex: 0 0 85%!important;
+   max-width: 84%!important;
+   flex: 0 0 84%!important;
  }
 }
 @media (min-width: 576px){

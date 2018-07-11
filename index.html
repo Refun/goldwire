@@ -32,15 +32,15 @@
 
 <!-- END: NavBar -->
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+<nav class="navbar navbar-light bg-dark">
+  <a class="navbar-brand" style="color: #c7c7c8;" href="#">
     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
     Goldwire
   </a>
 </nav>
 
 <div class="container-fluid color-bg">
- <div class="row no-gutters pt-4">
+ <div class="row no-gutters pt-2">
   <!-- First row -->
   <div class="col-md-12 col-lg-2">
    <!-- Left column (First row) -->
@@ -63,51 +63,46 @@
       </div>
   </div>
  
+ <div class="col-lg-10 "></div>
 
 
       <!-- Modal for New Post-->
-    <div class="modal col-12 col-lg-10 offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog section" role="document">
+  <div class="modal fade animation col-12 col-lg-10 offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog section " role="document">
         <div class="modal-content color-l-bg position-fixed">
-          <div class="modal-header border-0">
-           <div>
-             
-              <a class="btn btn-send color-b "><i class="fas fa-paper-plane color-b pr-2"></i>Send</a>
-           </div>   
-           
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
           
-          <div class="panel info">
-             <span class="color-g p-info-h">From:</span>
-                 <span class="color-gl p-info-des">Azmir refunrefun@goldwire.com</span>
-           </div>
+          <form name="task" id="task" action="">
+            <div class="modal-header border-0">
+                  <div>
+                    <a class="btn btn-send color-b" style="margin-top: -8px"><i class="fas fa-paper-plane color-b pr-2"></i>Send</a>
+                 </div>   
+                 
 
-           <div class="panel to">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                
+                <div class="panel info">
+                   <span class="color-g p-info-h">From:</span>
+                       <span class="color-gl p-info-des">Azmir refunrefun@goldwire.com</span>
+                 </div>
+
+                 <div class="panel to">
+                    
+                    <input type="text" id="c-field" data-enableshortcuts="true" placeholder="To">
+                 </div> 
+
+                 <div class="panel to">
+                    
+                   <input type="text" id="c-field" placeholder="Subject" data-enableshortcuts="true">
+                 </div> 
+
               
-              <input type="text" id="c-field" data-enableshortcuts="true" placeholder="To">
-           </div> 
-
-           <div class="panel to">
-              
-             <input type="text" id="c-field" placeholder="Subject" data-enableshortcuts="true">
-           </div> 
-
-          <div class="modal-body">
-           
-             
-             <!--  <div class="form-group">
-                <label for="message-text" class="col-form-label">Message:</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div> -->
-          
-          </div>
-          
-          <textarea name="content" id="editor">Start with Goldwire.
-          We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!Start with Goldwire. We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are!</textarea>
+                
+                <textarea name="content" id="editor">Start with Goldwire.
+                We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine !</textarea>
+        </form>
         </div>
       </div>
     </div>  <!-- Modal for New Post-->
@@ -119,15 +114,15 @@
 <div class="main row no-gutters">
   <div class="col-lg-2 col-md-12 c1">
     <div class="list-group sp-padd" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Folders</a>
-     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Inbox</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Drafts</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Templates</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Sent</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Spam</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Trash</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Outbox</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Newsletter</a>
+        <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Feeds</a>
+     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Global</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Local</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Most Read</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Most Rated</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Featured</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Popular</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Most Hyped</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">News</a>
        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Notification</a>
       
        <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Tags</a>
@@ -144,33 +139,68 @@
   <div class="col-lg-10 col-md-12 c2 color-bg post-content">
     <div class="tab-content" id="nav-tabContent ">
       <div  style="position: relative;top: -31px;left: 15px;">
-         <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span>
-         <p class="mt-2 mb-0 p-0 color-white">Inbox</p>
-         <span style="margin-left : -13px"><i class="fas fa-outdent m-bottom-icon"></i></span>
+         <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
+         <p class="mt-2 mb-0 p-0 color-white" style="margin-top: .8rem">Master Feed</p>
+         <!-- <span style="margin-left : -13px"><i class="fas fa-outdent m-bottom-icon"></i></span>
          <i class="fas fa-arrow-right m-bottom-icon"></i>
-         <i class="fas fa-paperclip m-bottom-icon"></i>
+         <i class="fas fa-paperclip m-bottom-icon"></i> -->
       </div>  
       <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
            <div class="list-group" data-toggle="modal" data-target="#myModal2">
                
-                <a href="#" class="list-group-item">
-                   <p class="m-0" style="font-size: 14px"> 
-                       <i style="color: #878787" class="fas fa-edit"></i>
-                      <span class="pl-2">Hi hello how r u ?</span>
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Hi hello how r u ?</span>
                    </p>
-                    <p class="name m-0" style="
-                                display: inline-block; font-size: 14px">
-                            <span class="badge badge-primary badge-pill" style="color: #878787; background: transparent;border: 1px solid  #878787;border-radius: 50%;font-size: 8px">2</span>
-                            <span class="ml-2">Bhaumik Patel</span>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> We created Goldwire, and its complementary mobile apps, to turn your routine investing experience into an productive experience.</span>
                     </p> 
-                     <div class="float-right">
+                    
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
                         
-                        <span><i style="color: #878787;font-size: 12px;    margin-left: 10px;"  class="fas fa-trash-alt"></i></span>
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
                     </div>
                            
-                    <div class="float-right">
-                        <span style="font-size: 12px;">11.16pm</span>
-                        <span><i style="color: #878787" class="fas trash-alt"></i></span>
+                </a>
+            
+        </div>
+            <div class="list-group" data-toggle="modal" data-target="#myModal2">
+               
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Hi hello how r u ?</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> We created Goldwire, and its complementary mobile apps, to turn your routine investing experience into an productive experience.</span>
+                    </p> 
+                    
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </a>
+            
+        </div>
+            <div class="list-group" data-toggle="modal" data-target="#myModal2">
+               
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Hi hello how r u ?</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> We created Goldwire, and its complementary mobile apps, to turn your routine investing experience into an productive experience.</span>
+                    </p> 
+                    
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
                     </div>
                            
                 </a>
@@ -189,7 +219,7 @@
 
          
         </div>
-        <p style="color: #EEE;font-size: 14px;padding: 20px 20px 20px 17px;
+        <p class="color-l-white" style="color: #EEE;font-size: 14px;padding: 20px 20px 20px 17px;
     white-space: pre-wrap;
     word-wrap: break-word;
     min-height: 20px;">Access from anywhere, anytime!</p>
@@ -209,11 +239,11 @@
           </div> 
        </div>    
         <div class="modal-body scrollable-panel">
-          <p class="color-white color-l-bg">Hello,
+          <p class="color-l-white">Hello,
 
             We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
           </p>
-           <p class="color-white color-l-bg">
+           <p class="color-l-white">
              - Goldwire Team
            </p>  
         </div>
