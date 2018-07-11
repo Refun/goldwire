@@ -510,9 +510,9 @@ button.ck.ck-button.ck-off {
 
 @media (min-width: 992px){
   .c-left-15{
-     margin-left: 14%!important;
-     max-width: 86%!important;
-     flex:  0 0 86%!important;
+     margin-left: 14.5%!important;
+     max-width: 85.5%!important;
+     flex: 0 0 85.5%!important;
     }
  .main .c1{
   max-width: 16%!important;
