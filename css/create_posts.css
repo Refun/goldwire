@@ -30,9 +30,14 @@
   height: 275px;
   border: 0px;
 }
-
+.ql-toolbar.ql-snow{
+        background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+}
 .ql-editor{
       border: 1px solid rgba(34,36,38,.15);
+      border-radius: 5px;
+      border-top: none;
 }
 .ql-editor:focus {
   box-shadow: none!important;
@@ -397,3 +402,4 @@
 .mt-10{
 	margin-top: 10px;
 }
+
