@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />  
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Goldwire</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
+
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
+
+<link rel="stylesheet" href="libraries/tab/tab.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/create_posts.css">
+
+    
+
+ <style type="text/css">
+   .reddit-effect{
+    margin-bottom: 8px;
+    color: rgb(28, 28, 28);
+    background-color: transparent;
+    padding: 8px 16px;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(237, 239, 241);
+    border-image: initial;
+   }
+   .reddit-effect:focus{
+    box-shadow: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(26, 26, 27);
+    border-image: initial;
+   }
+   .input_reddit{
+     border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(237, 239, 241);
+    border-image: initial;
+    background: rgb(255, 255, 255);
+
+}
+    .iconset-reddit{
+      display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(246, 247, 248);
+    box-sizing: border-box;
+    height: 37px;
+    position: sticky;
+    top: 48px;
+    z-index: 8;
+    flex-wrap: wrap;
+    padding: 4px;
+    border-radius: 4px;
+    }
+    .icon-reddit{
+      -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    line-height: 0px;
+    position: relative;
+    color: rgb(135, 138, 140);
+    border-radius: 2px;
+    outline: none;
+    padding: 4px;
+    transition: background-color 0.1s;
+    }
+    .btn_reddit{  
+     box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: rgb(0, 121, 211);
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 3px 16px;
+    border-color: rgb(0, 121, 211);
+    }
+    .btn_reddit:hover{
+       color: rgb(50, 147, 219);
+      border-color: rgb(50, 147, 219);
+    }
+   .btn_reddit:active {
+    color: rgb(0, 96, 168);
+    border-color: rgb(0, 96, 168);
+}
+  .btn_reddit_post{
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: rgb(0, 121, 211);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 3px 16px;
+    border-color: rgb(0, 121, 211);
+  }
+   .btn_reddit_post:active{
+    background-color: rgb(0, 96, 168);
+    color: rgb(255, 255, 255);
+    border-color: rgb(0, 96, 168);
+  }
+  .btn_reddit_post:hover {
+    background-color: rgb(50, 147, 219);
+    color: rgb(255, 255, 255);
+    border-color: rgb(50, 147, 219);
+}
+ </style>   
+</head>
+
+
+<body class="bg-custom">
+   <section class="create_posts">
+        <div class="container">
+               <div class="row">
+                    <div class="col-lg-8">
+                         <div class="post_header">
+                              <h1 class="main_header float-left">Create a post</h1>
+                              <a class="draft float-right">Drafts<span class="draft_number">1</span></a>
+                         </div>
+                         <div class="s9jf7s3-1 eMIqwY"><div class="s9jf7s3-0 erQCHC s11lu0wo-0 dYqdyx"><div class="dxnl5h-2 eLNqcq"><span class="s1seakjz-3 fwXPjD"></span><div class="dxnl5h-1 hHgIkE"><input class="dxnl5h-0 dyHKCp" placeholder="Choose a community" spellcheck="false" value=""></div><div><svg class="s1seakjz-4 fcjaGD" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g><path fill="inherit" d="M14.1711599,9.3535 L9.99925636,13.529 L5.82735283,9.3535 C5.51262415,9.0385 5.73543207,8.5 6.18054835,8.5 L13.8179644,8.5 C14.2630807,8.5 14.4858886,9.0385 14.1711599,9.3535"></path></g></svg></div></div></div></div>
+                        <div>
+                          <textarea class="reddit-effect" placeholder="title"></textarea>
+
+                          <button class="btn_reddit">Post</button>
+                          <button class="btn_reddit_post">Post</button>
+                        </div>          
+                    </div>
+                    <div class="col-lg-3">
+                     </div> 
+               </div>       
+        </div>
+   </section>
+  
+
+
+    
+   
+       
+    <!-- All JS libraries -->
+    <!-- JQUERY SLIM JS -->
+    <script src="libraries/jquery/jquery-3.2.1.slim.min.js"></script>
+    <!-- JQUERY Popper JS -->
+    <script src="libraries/jquery/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Summernote bs4 JS -->
+    <script src="libraries/nanobar.min.js"></script>
+    <script src="libraries/tab.js"></script>
+    <script src="js/ckeditor.js"></script>
+    <!-- manin JS -->
+    <script src="js/main.js"></script>
+    <!-- Summernote cleaner JS -->
+
+</body>
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
+      CKEDITOR.editorConfig = function (config) {
+    config.language = 'en';
+    config.uiColor = '#F7B42C';
+    config.height = 300;
+    config.toolbarCanCollapse = true;
+
+};
+CKEDITOR.replace('editor');  
+
+var options = {
+  classname: 'my-class',
+  id: 'my-id',
+  target: document.getElementById('myDivId')
+};
+
+var nanobar = new Nanobar( options );
+
+// move bar
+nanobar.go( 30 ); // size bar 30%
+nanobar.go( 76 ); // size bar 76%
+
+// size bar 100% and and finish
+nanobar.go(100);
+</script>
+</html>
