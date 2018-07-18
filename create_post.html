@@ -12,15 +12,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
 <link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+
 
 
 
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
-<link rel="stylesheet" href="libraries/tab/tab.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/create_posts.css">
@@ -28,197 +30,225 @@
     
 
  <style type="text/css">
-   .reddit-effect{
-    margin-bottom: 8px;
-    color: rgb(28, 28, 28);
-    background-color: transparent;
-    padding: 8px 16px;
-    padding-top: 8px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(237, 239, 241);
-    border-image: initial;
-   }
-   .reddit-effect:focus{
-    box-shadow: none;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(26, 26, 27);
-    border-image: initial;
-   }
-   .input_reddit{
-     border-radius: 4px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(237, 239, 241);
-    border-image: initial;
-    background: rgb(255, 255, 255);
 
-}
-    .iconset-reddit{
-      display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    background-color: rgb(246, 247, 248);
-    box-sizing: border-box;
-    height: 37px;
-    position: sticky;
-    top: 48px;
-    z-index: 8;
-    flex-wrap: wrap;
-    padding: 4px;
-    border-radius: 4px;
-    }
-    .icon-reddit{
-      -webkit-box-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    line-height: 0px;
-    position: relative;
-    color: rgb(135, 138, 140);
-    border-radius: 2px;
-    outline: none;
-    padding: 4px;
-    transition: background-color 0.1s;
-    }
-    .btn_reddit{  
-     box-sizing: border-box;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    text-transform: uppercase;
-    background-color: transparent;
-    color: rgb(0, 121, 211);
-    width: 100%;
-    border-width: 1px;
-    border-style: solid;
-    border-image: initial;
-    border-radius: 4px;
-    text-decoration: none;
-    padding: 3px 16px;
-    border-color: rgb(0, 121, 211);
-    }
-    .btn_reddit:hover{
-       color: rgb(50, 147, 219);
-      border-color: rgb(50, 147, 219);
-    }
-   .btn_reddit:active {
-    color: rgb(0, 96, 168);
-    border-color: rgb(0, 96, 168);
-}
-  .btn_reddit_post{
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    line-height: 24px;
-    text-transform: uppercase;
-    background-color: rgb(0, 121, 211);
-    color: rgb(255, 255, 255);
-    width: 100%;
-    border-width: 1px;
-    border-style: solid;
-    border-image: initial;
-    border-radius: 4px;
-    text-decoration: none;
-    padding: 3px 16px;
-    border-color: rgb(0, 121, 211);
-  }
-   .btn_reddit_post:active{
-    background-color: rgb(0, 96, 168);
-    color: rgb(255, 255, 255);
-    border-color: rgb(0, 96, 168);
-  }
-  .btn_reddit_post:hover {
-    background-color: rgb(50, 147, 219);
-    color: rgb(255, 255, 255);
-    border-color: rgb(50, 147, 219);
-}
  </style>   
+
 </head>
 
 
-<body class="bg-custom">
-   <section class="create_posts">
-        <div class="container">
-               <div class="row">
-                    <div class="col-lg-8">
-                         <div class="post_header">
-                              <h1 class="main_header float-left">Create a post</h1>
-                              <a class="draft float-right">Drafts<span class="draft_number">1</span></a>
-                         </div>
-                         <div class="s9jf7s3-1 eMIqwY"><div class="s9jf7s3-0 erQCHC s11lu0wo-0 dYqdyx"><div class="dxnl5h-2 eLNqcq"><span class="s1seakjz-3 fwXPjD"></span><div class="dxnl5h-1 hHgIkE"><input class="dxnl5h-0 dyHKCp" placeholder="Choose a community" spellcheck="false" value=""></div><div><svg class="s1seakjz-4 fcjaGD" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g><path fill="inherit" d="M14.1711599,9.3535 L9.99925636,13.529 L5.82735283,9.3535 C5.51262415,9.0385 5.73543207,8.5 6.18054835,8.5 L13.8179644,8.5 C14.2630807,8.5 14.4858886,9.0385 14.1711599,9.3535"></path></g></svg></div></div></div></div>
-                        <div>
-                          <textarea class="reddit-effect" placeholder="title"></textarea>
+<body class="bg_custom">
+ <div class="ui container">
+  <div class="ui grid">
+      <div class="eleven wide column" style="padding-left: 0px;padding-right: 0px">
+          <div class="post_header">
+                <h1 class="main_header float-left main_header">Create a post</h1>
+                <a class="draft float-right">Drafts<span class="draft_number">1</span></a>
+            </div>
+            
+        <form action="/" method="">    
+            <div class="ui four column grid">
+              <div class="row">
+                <div class="six column audience" style="width: 33.3%;">            
+                          <div class="ui fluid search selection dropdown border-0">
+                            <input type="hidden" class="input_reddit" name="country">
+                            <i class="dropdown icon"></i>
+                            <div class="default text reddit_search_text"> 
+                              
+                            Select Targrt Audience
+                            </div>
+                            <div class="menu">
+                            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+                            <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+                            <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+                           
+                          </div>
+                           </div>
+                </div>
+              </div>
+             </div>
+          </div>
 
-                          <button class="btn_reddit">Post</button>
-                          <button class="btn_reddit_post">Post</button>
-                        </div>          
+
+          <div class="eleven wide column bg-white br-5 mb-100">
+             <div class="column bg-white">
+                   <div class="ui form">
+                    <div class="field">
+                      <input type="text" class="reddit-effect h-39" placeholder="Title">
                     </div>
-                    <div class="col-lg-3">
-                     </div> 
-               </div>       
-        </div>
-   </section>
-  
+                  </div>
+               </div>
+
+             <!-- Create the editor container -->
+             <div id="textarea_hover_effect">
+                <div id="editor-container">
+                </div>
+            </div>
+
+              <div class="field mtb-15">
+                  <label >Post Template</label>
+                  <div class="field mt-10">
+                      <div name="category" role="combobox" aria-expanded="false" class="ui fluid search selection dropdown">
+                        <input aria-autocomplete="list" autocomplete="off" class="search reddit-effect" tabindex="0" type="text" value="">
+                          <div class="text" role="alert" aria-live="polite">Technology</div>
+                             <i aria-hidden="true" class="dropdown ico "></i>
+                          <div role="listbox" class="menu transition">
+                             <div role="option" aria-checked="true" aria-selected="true" class="active selected item" style="pointer-events: all;">
+                                 <span class="text">Technology</span>
+                             </div>
+                             <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                                <span class="text">Bangladesh Ecommerce</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-    
-   
+                <div class="sc-bdVaJa jwDCfa">
+                    <div style="padding-bottom: 25px;">
+                        <div>
+                           <h3 class="fw-500">Answer the following questions.</h3>
+                           <h4 class="fw-500" style="margin-top: -4px;">Technology</h4>
+                           <div class="ui equal width grid" >
+                              <div class="column">
+                                <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500">A question about the field?</label>
+                                          <div class="ui input"><input placeholder="A question about the field?" class="reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="ui equal width grid" style="margin-top: 0px">
+                                <div class="column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <label class="fw-500">Another question about the opportunity?</label
+                                               ><div class="ui slider checkbox">
+                                                 <input type="checkbox" name="newsletter"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                             </div>
+                             <div class="ui equal width grid" style="margin-top: 0px">
+                                 <div class="column">
+                                    <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500">Another question about the opportunity?</label>
+                                          <div class="ui input"><input placeholder="Another question about the opportunity?" class="reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                   </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div style="float: right;">   
+                      <div class="d-inline">
+                            <button class="btn_reddit_post">Submit</button>
+                          </div>  
+                      </div>
+                </form> 
+
+          </div>
+     
+
+
+    <!-- RIGHT SIDEBAR -->
+  <div class="five wide column" style="position: relative;top: -28px;">
+      <div class="info_box_right">
+          <div class="content_header">
+            <div class="d-inline">
+             <img src="img/icon.png" class="img_element" alt="icon text"/>
+             </div>
+             <div class="d-inline">
+               <span class="right_header"> Create a Post</span>
+             </div>
+          </div>  
+          <ol class="right_list">
+              <li class="right_list_element ">Remember the human</li>
+              <li class="right_list_element ">Behave like you would in real life</li>
+              <li class="right_list_element ">Look for the original source of content</li>
+              <li class="right_list_element ">Search for duplicates before posting</li>
+              <li class="right_list_element ">Read the community’s rules</li>
+          </ol>
+          </div> 
+
+          <div class="jncr6d-0 alert_text" data-redditstyle="true">Please be mindful of goldwire's <a href="">content policy</a> and practice good <a href="">reddiquette</a>.
+          </div>
+          <div class="s166vbxa-4 gsmnax s180jmvl-0 eavsOb">
+             <div class="_3RPJ8hHnfFohktLZca18J6">
+                <div class="s166vbxa-0 bUCCdg">
+                   <div class="s21l9wz-0 bmnsEB"><div>
+                       <a class="link_text" href="https://about.reddit.com">about</a>
+                       <a class="link_text" href="https://about.reddit.com/careers/">careers</a>
+                       <a class="link_text" href="https://about.reddit.com/press/">press</a></div>
+                    </div>
+                    <div class="s21l9wz-0 bmnsEB">
+                    <div>
+                      <a class="link_text" href="https://about.reddit.com/advertise/">advertise</a>
+                      <a class="link_text" href="http://www.redditblog.com/">blog</a>
+                      <a class="link_text" href="https://www.reddithelp.com">help</a>
+                    </div>
+                    </div>
+                    <div class="s21l9wz-0 bmnsEB"><div><a class="link_text" href="https://www.reddit.com/mobile/download">the golwire app</a><a class="link_text" href="https://www.reddit.com/gold/about">golwire gold</a><a class="link_text" href="http://redditgifts.com/">golwire gifts</a></div>
+                    </div>
+                </div>
+                 <div class="s166vbxa-2 bRyRTN">
+                    <div>
+                        <a class="agreement_text" href="https://www.reddit.com/help/contentpolicy"> content policy</a>
+                         <span>|</span>
+                        <a class="agreement_text" href="https://www.reddit.com/help/privacypolicy"> privacy policy</a>
+                    </div>
+                  <div>
+                    <a class="agreement_text" href="https://www.reddit.com/help/useragreement"> user agreement</a><span>|</span><a class="agreement_text" href=""> mod policy</a>
+                  </div>
+                  <div>© 2018 Goldwire, Inc. All rights reserved</div></div>
+                </div>
+              </div>
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+</div> 
+
+
+</div>
+</div>
+
        
     <!-- All JS libraries -->
     <!-- JQUERY SLIM JS -->
-    <script src="libraries/jquery/jquery-3.2.1.slim.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
     <!-- JQUERY Popper JS -->
-    <script src="libraries/jquery/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Summernote bs4 JS -->
-    <script src="libraries/nanobar.min.js"></script>
-    <script src="libraries/tab.js"></script>
-    <script src="js/ckeditor.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+   
     <!-- manin JS -->
     <script src="js/main.js"></script>
     <!-- Summernote cleaner JS -->
 
 </body>
-
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-
-      CKEDITOR.editorConfig = function (config) {
-    config.language = 'en';
-    config.uiColor = '#F7B42C';
-    config.height = 300;
-    config.toolbarCanCollapse = true;
-
-};
-CKEDITOR.replace('editor');  
-
-var options = {
-  classname: 'my-class',
-  id: 'my-id',
-  target: document.getElementById('myDivId')
-};
-
-var nanobar = new Nanobar( options );
-
-// move bar
-nanobar.go( 30 ); // size bar 30%
-nanobar.go( 76 ); // size bar 76%
-
-// size bar 100% and and finish
-nanobar.go(100);
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block']
+    ]
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow'  // or 'bubble'
+});
 </script>
+
+
 </html>
