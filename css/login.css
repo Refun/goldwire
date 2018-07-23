@@ -1,0 +1,181 @@
+.SnooIcon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    content: url('../img/icon.png');
+    margin-bottom: 8px;
+}
+.Title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 20px 0;
+}
+.ColumnContainer.mode-auth .tfa-description {
+    margin-bottom: 0;
+}
+.AnimatedForm__field {
+    position: relative;
+}
+
+.AnimatedForm__submitButton, .AnimatedForm__textInputLabel {
+    font-weight: 600;
+    letter-spacing: .5px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.AnimatedForm__textInputLabel {
+    font-size: 10px;
+    line-height: 12px;
+    position: absolute;
+    vertical-align: middle;
+    top: 14px;
+    left: 12px;
+    color: #a5a4a4;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+    line-height: 23px;
+}
+.AnimatedForm__field+.AnimatedForm__field {
+    margin-top: 24px;
+}
+.AnimatedForm__field:before {
+    z-index: 1;
+    right: 14px;
+    top: 18px;
+    height: 10px;
+    width: 12px;
+    background: url(https://www.redditstatic.com/accountmanager/d489caa….svg);
+}
+
+.AnimatedForm__field+.AnimatedForm__field {
+    margin-top: 24px;
+}
+
+.AnimatedForm__submitButton {
+    font-family: IBMPlexSans,sans-serif;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    background: #0079d3;
+    cursor: pointer;
+    outline: 0;
+    line-height: unset;
+    height: 35px;
+    width: 155px;
+    min-width: 155px;
+    overflow: inherit;
+    position: relative;
+    outline: none;
+}
+
+.AnimatedForm__submitButton:before {
+    position: absolute;
+    content: "";
+    opacity: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.BottomLink, .BottomText .BottomLink {
+    font-family: IBMPlexSans,sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.BottomText .BottomLink {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.AnimatedForm__textInput:active+.AnimatedForm__textInputLabel, .AnimatedForm__textInput:hover+.AnimatedForm__textInputLabel, .AnimatedForm__textInput[data-empty=false]+.AnimatedForm__textInputLabel {
+    -webkit-transform: translate3d(0,-8px,0) scale(.83333333);
+    transform: translate3d(0,-8px,0) scale(.83333333);
+    line-height: 14px;
+}
+.AnimatedForm__submitButton, .AnimatedForm__textInputLabel {
+    font-weight: 600;
+    letter-spacing: .5px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.AnimatedForm__textInputLabel {
+    font-size: 10px;
+    line-height: 12px;
+    position: absolute;
+    vertical-align: middle;
+    top: 14px;
+    left: 12px;
+    color: #a5a4a4;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+    line-height: 23px;
+}
+
+/*.AnimatedForm__field.m-valid .AnimatedForm__textInput {
+    padding-right: 36px;
+    border-color: #24a0ed;
+}*/
+.AnimatedForm__field.m-valid:before {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+}
+
+.AnimatedForm__field:before {
+    z-index: 1;
+    right: 14px;
+    top: 18px;
+    height: 10px;
+    width: 12px;
+    background: url(https://www.redditstatic.com/accountmanager/d489caa….svg);
+}
+
+.AnimatedForm__field.m-valid .AnimatedForm__textInput:focus {
+    /* padding-right: 36px; */
+    border-color: #24a0ed;
+}
+
+.AnimatedForm__textInput {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    outline: 0;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: all .2s ease-in-out;
+    height: 48px;
+    padding: 22px 12px 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    background-color: #fcfcfb;
+}
+
+.BottomLink, .BottomText .BottomLink {
+    font-family: IBMPlexSans,sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.BottomText .BottomLink {
+    font-size: 12px;
+    line-height: 24px;
+}
+a:hover{
+  text-decoration: none;
+}

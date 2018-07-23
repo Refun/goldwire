@@ -20,26 +20,52 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
 
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <link rel="stylesheet" href="libraries/tab/tab.css">
+<link rel="stylesheet" href="libraries/loader/loader.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Merienda|Passion+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+<link rel="stylesheet" href="css/create_posts.css">
 <link rel="stylesheet" href="css/style.css">
+
 
     
 </head>
 
 
 <body>
+  <div class="loader-body" id="loader">
+  <div class="loader"></div>
+</div>
 <!-- NavBar -->
 
 <!-- END: NavBar -->
 <!-- Image and text -->
 <header>
-<nav class="navbar navbar-light bg-dark w-100%">
-  <a class="navbar-brand" style="color: #c7c7c8;" href="#">
-    <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Goldwire
+<nav class="navbar navbar-light w-100% color-bg2">
+  <a class="navbar-brand" style="color: #c7c7c8;font-family: 'Concert One', cursive;" href="#">
+<!--     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+ -->    Goldwire
   </a>
+  <p class="float-right color-white">Faisal | Logout </p>
 </nav>
+<header class="site-header" role="banner">
+  <div class="search-wrap">
+      <div class="container">
+          <form action="" method="" role="search">
+              <input id="search-bar" placeholder="Search our website&hellip;">
+            </form>
+        </div>
+    </div>
+   <div class="container">
+        <div class="nav-bar ">
+          <a href="javascript:;" class="toggle-search">Search</a>
+        </div>
+    </div>
+</header>
 </header>
 
 
@@ -49,54 +75,240 @@
 
       <div class="container-fluid">
         <div class="row">
-  <div class="modal fade animation col-12 col-lg-10 offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <!--  <div class="modal fade animation col-12 col-lg-10 offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog section " role="document">
-        <div class="modal-content color-l-bg position-fixed">
+        <div class="modal-content color-l-bg ">
           
           <form name="task" id="task" action="">
-            <div class="modal-header border-0">
-                  <div>
-                    <a class="btn btn-send color-b"><i class="fas fa-paper-plane color-b pr-2"></i>Send</a>
-                 </div>   
-                 
-
+             <div class="modal-header border-0">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
+                  <div class="post_header">
+                <h1 class="main_header float-left main_header white-t">Create a post</h1>
+                <a class="draft float-right">Drafts<span class="draft_number">1</span></a>
+            </div>
+            </div>
+             
+           
+            <div class="scrollable-panel">
+              <div class="col-md-3 ui fluid search selection dropdown border-0">
+                <input type="hidden" class="input_reddit" name="country">
+                <i class="dropdown icon"></i>
+                <div class="default text reddit_search_text"> 
+                  
+                Select Targrt Audience
                 </div>
-                <select class="custom-select custom-select-sm col-lg-3 col-md-12 color-l-bg">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <div class="panel info">
-                   <span class="color-g p-info-h">From:</span>
-                       <span class="color-gl p-info-des">Azmir refunrefun@goldwire.com</span>
-                 </div>
+                <div class="menu">
+                <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+                <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+                <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+               
+              </div>
+               </div>
+           
+           
 
-                 <div class="panel to">
-                    
-                    <input type="text" id="c-field"  placeholder="To">
-                 </div> 
+              <div id="textarea_hover_effect">
+                <div id="editor-container">
+                </div>
+              </div>
+              
+                <div class="field mtb-15">
+                  <label>Post Template</label>
+                  <div class="field mt-10">
+                      <div name="category" role="combobox" aria-expanded="false" class="ui fluid search selection dropdown">
+                        <input aria-autocomplete="list" autocomplete="off" class="search reddit-effect" tabindex="0" type="text" value="">
+                          <div class="text" role="alert" aria-live="polite"><span class="text">Technology</span></div>
+                             <i aria-hidden="true" class="dropdown ico "></i>
+                          <div role="listbox" class="menu transition hidden" tabindex="-1">
+                             <div role="option" aria-checked="true" aria-selected="true" class="item active selected" style="pointer-events: all;">
+                                 <span class="text">Technology</span>
+                             </div>
+                             <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                                <span class="text">Bangladesh Ecommerce</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                 <div class="panel to">
-                    
-                   <input type="text" id="c-field" placeholder="Subject" >
-                 </div> 
+                 <div class="sc-bdVaJa jwDCfa">
+                    <div style="padding-bottom: 25px;">
+                        <div>
+                           <h3 class="fw-500">Answer the following questions.</h3>
+                           <h4 class="fw-500" style="margin-top: -4px;">Technology</h4>
+                           <div class="ui equal width grid">
+                              <div class="column">
+                                <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500">A question about the field?</label>
+                                          <div class="ui input"><input placeholder="A question about the field?" class="reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="ui equal width grid" style="margin-top: 0px">
+                                <div class="column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <label class="fw-500">Another question about the opportunity?</label><div class="ui slider checkbox">
+                                                 <input type="checkbox" name="newsletter" tabindex="0" class="hidden"><label></label></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                             </div>
+                             <div class="ui equal width grid" style="margin-top: 0px">
+                                 <div class="column">
+                                    <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500">Another question about the opportunity?</label>
+                                          <div class="ui input"><input placeholder="Another question about the opportunity?" class="reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                   </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div> 
 
-                <select class="custom-select custom-select-sm col-lg-3 col-md-12 color-l-bg mt-3 mb-3">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+                <div style="float: right;">   
+                      <div class="d-inline">
+                            <button class="btn_reddit_post">Submit</button>
+                          </div>  
+                      </div>
+
+              
                 
-                <textarea name="content" id="editor">Start with Goldwire.
-                We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine !</textarea>
+             
+                 <a class="btn btn-send color-b"><i class="fas fa-paper-plane color-b pr-2"></i>Send</a>
         </form>
-        </div>
       </div>
+        </div>
+      </div> -->
+
+    <div class="modal right fade  offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 82.7%;top: 56px">
+
+        <div class="modal-header border-0">
+            <div class="post_header" style="width: 96.5%;">
+                <h1 class="main_header float-left main_header white-t">Create a post</h1>
+                <a class="draft float-right color-white">Drafts<span class="draft_number">1</span></a>
+            </div>        
+        </div>
+        
+          
+        <div class="modal-body scrollable-panel">
+          <form name="task" id="task" action="">     
+            <div class="scrollable-panel">
+              <div class="col-md-3 ui fluid search selection dropdown border-0 p-3" style="height: 42px">
+                <input type="hidden" class="input_reddit" name="country">
+                <i class="dropdown icon"></i>
+                <div class="default text " style="top: -4px">  
+                      Select Targrt Audience
+                </div>
+                <div class="menu">
+                    <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+                    <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+                    <div class="item" data-value="al"><i class="al flag"></i>Albania</div>    
+               </div>
+            </div>
+           
+             <div class="ui form pt-4">
+                    <div class="field">
+                      <input type="text" class="reddit-effect h-39 w-100" placeholder="Title">
+                    </div>
+                  </div>
+
+              <div id="textarea_hover_effect" class="pt-3">
+                <div id="editor-container">
+                </div>
+              </div>
+              
+                <div class="field mtb-15 color-white">
+                  <label>Post Template</label>
+                  <div class="field mt-10">
+                      <div name="category" role="combobox" aria-expanded="false" class="ui fluid search selection dropdown">
+                        <input aria-autocomplete="list" autocomplete="off" class="search reddit-effect" tabindex="0" type="text" value="">
+                          <div class="text" role="alert" aria-live="polite"><span class="text ">Technology</span></div>
+                             <i aria-hidden="true" class="dropdown ico "></i>
+                          <div role="listbox" class="menu transition hidden" tabindex="-1">
+                             <div role="option" aria-checked="true" aria-selected="true" class="item active selected" style="pointer-events: all;">
+                                 <span class="text">Technology</span>
+                             </div>
+                             <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                                <span class="text">Bangladesh Ecommerce</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="sc-bdVaJa jwDCfa color-white">
+                    <div style="padding-bottom: 25px;">
+                        <div>
+                           <h3 class="fw-500 f-18">Answer the following questions.</h3>
+                           <h4 class="fw-500 f-16 pt-3 pb-0">Technology</h4>
+                           <div class="ui equal width grid">
+                              <div class="column ">
+                                <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500 f-14">A question about the field?</label>
+                                          <div class="ui input "><input placeholder="A question about the field?" class="w-100 reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="ui equal width grid" style="margin-top: 0px">
+                                <div class="column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <label class="fw-500">Another question about the opportunity?</label>
+                                            <div class="custom-control custom-checkbox mb-3 ml-1">
+                                            <input type="checkbox" class="custom-control-input pl-1" id="customControlValidation1" required>
+                                            <label class="custom-control-label" for="customControlValidation1"></label>
+                                            
+                                          </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                             </div>
+                             <div class="ui equal width grid" style="margin-top: 0px">
+                                 <div class="column">
+                                    <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500">Another question about the opportunity?</label>
+                                          <div class="ui input"><input placeholder="Another question about the opportunity?" class="w-100 reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                   </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div> 
+
+                <div style="float: right;">   
+                      <div class="d-inline ">
+                            <button class="btn_reddit_post mb-5">Submit</button>
+                          </div>  
+                      </div>
+
+              
+                
+             
+                
+        </form> 
+        </div>
+
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+   </div> <!-- myModal2 -->
     </div>  <!-- Modal for New Post-->
 
 </div>
@@ -109,7 +321,7 @@
     <div class="list-group sp-padd pt-3" id="list-tab" role="tablist">
       <div class="btn-group dropright ">
         <button type="button" class="btn btn-secondary btn-blue border-0"  data-toggle="modal" data-target="#exampleModal">
-           New Post
+           Share a private opportunity
         </button>
         <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="sr-only">Toggle Dropright</span>
@@ -125,67 +337,139 @@
       </div>
       
 
-        <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Feeds</a>
-     <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Global</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Local</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Most Read</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Most Rated</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Featured</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Popular</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Most Hyped</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">News</a>
-       <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Notification</a>
+      <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Collections</a>
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home-feed" role="tab" aria-controls="home">Master Feed</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-read" role="tab" aria-controls="profile">Most Read</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-recent" role="tab" aria-controls="profile">Most Recent</a>
+            <a class="list-group-item list-group-item-action" id="list-messages" data-toggle="list" href="#list-messages-list-viewed" role="tab" aria-controls="messages">Most Viewed</a>
+            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-settings-list-connected" role="tab" aria-controls="settings">Most Connected</a>
+            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-settings-list-discussed" role="tab" aria-controls="settings">Most Discussed</a>
+   
       
-       <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Tags</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot"></span>Newsletter</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot"></span>Notification</a>
-       <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Folders</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Unread</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">All Messages</a>
-           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Flagged</a>    
+      <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Clubs</a>
+
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot"></span>
+            Goldwire F.C.
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-purple"></span>Bangladesh Gems</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+            Through the belts and roads
+          </a>  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-green"></span>
+            Middleast Gems
+          </a> 
+           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-pest"></span>
+           African Gems
+          </a> 
+           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+            Asian Gems
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+            American Gems
+          </a>
+
+       <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">My Goldwire</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Bookmarks</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Connection Requests</a>
+               
 
     </div>
 </div>
 
   <div class="col-lg-10 col-md-12 c2 color-bg post-content">
     <div class="tab-content" id="nav-tabContent ">
-      <div  style="position: relative;top: 14px;left: 15px;">
+    
+    
+
+
+
+      <div class="tab-pane fade show active"  id="list-home-feed" role="tabpanel" aria-labelledby="list-home-list">
+          
+          <div  style="position: relative;margin-top: 27px;left: 15px;">
          <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
-         <p class="mt-2 mb-0 p-0 color-white f-14" style="margin-top: .8rem">Master Feed</p>
-         <!-- <span style="margin-left : -13px"><i class="fas fa-outdent m-bottom-icon"></i></span>
-         <i class="fas fa-arrow-right m-bottom-icon"></i>
-         <i class="fas fa-paperclip m-bottom-icon"></i> -->
-      </div>  
-      <div class="tab-pane fade show active" style="margin-top: 35px" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-           <div class="list-group" data-toggle="modal" data-target="#myModal2">
+         <span class="mt-2 mb-0 p-0 color-white f-14 master_text">Master Feed</span>
+          
+          <span class="float-right super_text">
+            <span class="color-white super_text_label">Super User</span>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round" id="myButton"></span>
+            </label>
+          </span>  
+          </div>
+
+           <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
                
-                <a href="#" class="list-group-item feed-body">
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                    <a href="#" class="badge badge-purple">Bangladesh Gems</a>
+                    <a href="#" class="badge badge-warning">Godlwire Fc</a>
+                    <a href="#" class="badge badge-danger">Middleast Gems</a>
+                    <a href="#" class="badge badge-warning">Asian Gems</a>
+                    <a href="#" class="badge badge-info">African Gems</a>
+                    <a href="#" class="badge badge-lgreen">American Gems</a>
+                  </span>
+                        
+                    
+
                    <p class="m-0 f-14"> 
-                      <span class="pl-2 title">Hi hello how r u ?</span>
+                      <span class="pl-2 title">Share prices of five cos rise abnormally</span>
                    </p>
                     <p class="name m-0 d-inline-block f-14">
-                            <span class="ml-2 message"> We created Goldwire, and its complementary mobile apps, to turn your routine investing experience into an productive experience.</span>
+                            <span class="ml-2 message"> The share prices of five companies rose abnormally, although there is no undisclosed price sensitive information regarding the hikes.</span>
                     </p> 
                    
                            
                     <div class="d-inline-block float-right content_icons">
                         <span class="f-14 date">june 9</span>
-                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
                         
-                        <span><i class="fas fa-trash-alt icons" ></i></span>
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
                     </div>
                            
-                </a>
+                </span>
+            
+        </div>  
+        <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                    <a href="#" class="badge badge-purple">Primary</a>
+                    <a href="#" class="badge badge-danger">Primary</a>
+                    <a href="#" class="badge badge-warning">Primary</a>
+                    <a href="#" class="badge badge-info">Primary</a>
+                    <a href="#" class="badge badge-lgreen">Primary</a>
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Share prices of five cos rise abnormally</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The share prices of five companies rose abnormally, although there is no undisclosed price sensitive information regarding the hikes.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
             
         </div>
-          <div class="list-group" data-toggle="modal" data-target="#myModal2">
+          <div class="list-group " data-toggle="modal" data-target="#myModal2">
                
                 <a href="#" class="list-group-item feed-body">
                    <p class="m-0 f-14"> 
-                      <span class="pl-2 title">Hi hello how r u ?</span>
+                      <span class="pl-2 title">US stocks rise as Microsoft gains</span>
                    </p>
                     <p class="name m-0 d-inline-block f-14">
-                            <span class="ml-2 message"> We created Goldwire, and its complementary mobile apps, to turn your routine investing experience into an productive experience.</span>
+                            <span class="ml-2 message">US stocks rose on Friday as solid results from Microsoft lifted technology stocks and eased .</span>
                     </p> 
                    
                            
@@ -203,10 +487,31 @@
                
                 <a href="#" class="list-group-item feed-body">
                    <p class="m-0 f-14"> 
-                      <span class="pl-2 title">Hi hello how r u ?</span>
+                      <span class="pl-2 title">Chinese yuan slides, spooking Asian stocks, as trade war fears heighten</span>
                    </p>
                     <p class="name m-0 d-inline-block f-14">
-                            <span class="ml-2 message"> We created Goldwire, and its complementary mobile apps, to turn your routine investing experience into an productive experience.</span>
+                            <span class="ml-2 message"> The Chinese yuan skidded to one-year lows on Friday, shaking up Asian share markets and stoking concerns Beijing’s .</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </a>
+            
+        </div> 
+        <div class="list-group" data-toggle="modal" data-target="#myModal2">
+               
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">US stocks close higher amid corporate earnings</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> Excluding the energy sector, the earnings growth estimate declines to 16.9 per cent, according to the latest statistics released by Thomson.</span>
                     </p> 
                    
                            
@@ -221,18 +526,40 @@
             
         </div>
       </div>
+
+
+    <div class="tab-pane fade" id="list-profile-recent" role="tabpanel" aria-labelledby="list-profile-list"> 
+         <div  style="position: relative;margin-top: 27px;left: 15px;">
+         <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
+        
+          
+        
+          </div>
+               <div class="list-group w-100 opss_section" data-toggle="modal" data-target="#myModal2">
+                <h2 class="text-center"> 
+                     Oopss. You are not eligilbe to enter into this section.Please subscribe to enter this section.
+                    </h2> 
+                    
+                           
+               
+            
+        </div>
+
+          </div>
+
+         
+
+      </div>
+
+
+
     <!--       Modal for right side -->
     <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" >
     <div class="modal-dialog" role="document">
       <div class="modal-content">
 
         <div class="modal-header border-0">
-          <p class="color-l-white" style="color: #EEE;
-    font-size: 14px;
-    padding: 6px 5px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    min-height: 20px;">Access from anywhere, anytime!</p>
+          <p class="color-l-white" style="color: #EEE;font-size: 14px;padding: 6px 5px;white-space: pre-wrap;word-wrap: break-word;min-height: 20px;">Access from anywhere, anytime!</p>
         <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
@@ -262,6 +589,12 @@
             We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
           </p> <p class="color-l-white pl-17">Hello,
             We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p><p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p><p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p><p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
           </p>
            <p class="color-l-white pl-17">
              - Goldwire Team
@@ -286,7 +619,11 @@
 
    
 
-   
+   <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "https://www.youtube.com/watch?v=CGw-dT-fs6w";
+    };
+</script>
        
     <!-- All JS libraries -->
     <!-- JQUERY SLIM JS -->
@@ -298,7 +635,11 @@
     <!-- Summernote bs4 JS -->
     <script src="libraries/nanobar.min.js"></script>
     <script src="libraries/tab.js"></script>
+    <script src="libraries/loader/loader.js"></script>
     <script src="js/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <!-- manin JS -->
     <script src="js/main.js"></script>
     <!-- Summernote cleaner JS -->
@@ -306,34 +647,16 @@
 </body>
 
 <script>
-    ClassicEditor
-        .create( document.querySelector( '#editor' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-
-      CKEDITOR.editorConfig = function (config) {
-    config.language = 'en';
-    config.uiColor = '#F7B42C';
-    config.height = 300;
-    config.toolbarCanCollapse = true;
-
-};
-CKEDITOR.replace('editor');  
-
-var options = {
-  classname: 'my-class',
-  id: 'my-id',
-  target: document.getElementById('myDivId')
-};
-
-var nanobar = new Nanobar( options );
-
-// move bar
-nanobar.go( 30 ); // size bar 30%
-nanobar.go( 76 ); // size bar 76%
-
-// size bar 100% and and finish
-nanobar.go(100);
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block']
+    ]
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow'  // or 'bubble'
+});
 </script>
 </html>
