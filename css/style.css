@@ -14,6 +14,11 @@ body {
     margin: 0;
     padding: 5px 0;
 }
+.list-group-item-action:focus, .list-group-item-action:hover {
+    color: #c7c7c8;
+    text-decoration: none;
+    background-color: #202225!important;
+}
 .rt-6{
   position: relative;
   top: 6px;
