@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />  
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Goldwire</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="shortcut icon" type="image/x-icon" href="img/icon.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+
+
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900" rel="stylesheet">
+
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link rel="stylesheet" href="libraries/tab/tab.css">
+<link rel="stylesheet" href="libraries/loader/loader.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Merienda|Passion+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+<link rel="stylesheet" href="css/create_posts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tags.css">
+
+
+    
+</head>
+
+
+<body>
+  <div class="loader-body" id="loader">
+  <div class="loader"></div>
+</div>
+<!-- NavBar -->
+
+<!-- END: NavBar -->
+<!-- Image and text -->
+<header>
+<nav class="navbar navbar-light w-100% color-bg2">
+
+
+  <a class="navbar-brand" style="color: #c7c7c8;" href="#">
+     Goldwire F.C.
+  </a>
+     <div class="float-right" style="position: relative;
+        top: 5px;">
+            <form class="d-inline">
+              <i class="fas fa-search" style="position: absolute;
+                left: -8px;
+                top: 7px;
+                z-index: 99;    color: #008ddd;"></i>
+               <input type="text" class="input_reddit" name="search" placeholder="Search">
+            </form>
+
+        <p class="float-right color-l-white">Faisal | Logout </p>
+      </div>
+</nav>
+</header>
+
+
+
+
+
+      <!-- Modal for New Post-->
+
+      <div class="container-fluid">
+        <div class="row">
+
+
+    <div class="modal right fade  offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="width: 82.7%;top: 56px">
+
+        <div class="modal-header border-0">
+            <div class="post_header" style="width: 96.5%;">
+                <h1 class="main_header float-left main_header white-t">Create a post</h1>
+                <a class="draft float-right color-white">Drafts<span class="draft_number">1</span></a>
+            </div>        
+        </div>
+        
+          
+        <div class="modal-body scrollable-panel">
+          <form name="task" id="task" action="">     
+            <div class="scrollable-panel">
+              <div class="col-md-3 ui fluid search selection dropdown border-0 p-3" style="height: 42px">
+                <input type="hidden" class="input_reddit" name="country">
+                <i class="dropdown icon"></i>
+                <div class="default text " style="top: -4px">  
+                      Select Targrt Audience
+                </div>
+                <div class="menu">
+                    <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+                    <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+                    <div class="item" data-value="al"><i class="al flag"></i>Albania</div>    
+               </div>
+            </div>
+           
+             <div class="ui form pt-4">
+                    <div class="field">
+                      <input type="text" class="reddit-effect h-39 w-100" placeholder="Title">
+                    </div>
+                  </div>
+
+              <div id="textarea_hover_effect" class="pt-3">
+                <div id="editor-container">
+                </div>
+              </div>
+              
+                <div class="field mtb-15 color-white">
+                  <label>Post Template</label>
+                  <div class="field mt-10">
+                      <div name="category" role="combobox" aria-expanded="false" class="ui fluid search selection dropdown">
+                        <input aria-autocomplete="list" autocomplete="off" class="search reddit-effect" tabindex="0" type="text" value="">
+                          <div class="text" role="alert" aria-live="polite"><span class="text ">Technology</span></div>
+                             <i aria-hidden="true" class="dropdown ico "></i>
+                          <div role="listbox" class="menu transition hidden" tabindex="-1">
+                             <div role="option" aria-checked="true" aria-selected="true" class="item active selected" style="pointer-events: all;">
+                                 <span class="text">Technology</span>
+                             </div>
+                             <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
+                                <span class="text">Bangladesh Ecommerce</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="sc-bdVaJa jwDCfa color-white">
+                    <div style="padding-bottom: 25px;">
+                        <div>
+                           <h3 class="fw-500 f-18">Answer the following questions.</h3>
+                           <h4 class="fw-500 f-16 pt-3 pb-0">Technology</h4>
+                           <div class="ui equal width grid">
+                              <div class="column ">
+                                <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500 f-14">A question about the field?</label>
+                                          <div class="ui input "><input placeholder="A question about the field?" class="w-100 reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="ui equal width grid" style="margin-top: 0px">
+                                <div class="column">
+                                    <div class="ui form">
+                                        <div class="field">
+                                            <label class="fw-500">Another question about the opportunity?</label>
+                                            <div class="custom-control custom-checkbox mb-3 ml-1">
+                                            <input type="checkbox" class="custom-control-input pl-1" id="customControlValidation1" required>
+                                            <label class="custom-control-label" for="customControlValidation1"></label>
+                                            
+                                          </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                             </div>
+                             <div class="ui equal width grid" style="margin-top: 0px">
+                                 <div class="column">
+                                    <div class="ui form">
+                                         <div class="field">
+                                           <label class="fw-500">Another question about the opportunity?</label>
+                                          <div class="ui input"><input placeholder="Another question about the opportunity?" class="w-100 reddit-effect h-39" name="2" type="text">
+                                          </div>
+                                        </div>
+                                     </div>
+                                   </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div> 
+
+                <div style="float: right;">   
+                      <div class="d-inline ">
+                            <button class="btn_reddit_post mb-5">Submit</button>
+                          </div>  
+                      </div>
+
+              
+                
+             
+                
+        </form> 
+        </div>
+
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+   </div> <!-- myModal2 -->
+    </div>  <!-- Modal for New Post-->
+
+</div>
+</div>
+
+<section class="color-bg">
+<div class="container-fluid p-0">
+<div class="main row no-gutters">
+  <div class="col-lg-2 col-md-12 c1">
+    <div class="list-group sp-padd pt-3" id="list-tab" role="tablist">
+      <div class="btn-group dropright ">
+        <button type="button" class="btn btn-secondary btn-blue border-0"  data-toggle="modal" data-target="#exampleModal">
+           Share a opportunity
+        </button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropright</span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-center">
+           <a class="dropdown-item" href="#">New Post</a>
+           <a class="dropdown-item" href="#">New Contact</a>
+           <a class="dropdown-item" href="#">New Event</a>
+           <a class="dropdown-item" href="#">New Task</a>
+           <a class="dropdown-item" href="#">New Bookmark</a>
+        
+        </div>
+      </div>
+      
+
+      <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Collections</a>
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home-feed" role="tab" aria-controls="home">Master Feed</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-read" role="tab" aria-controls="profile">Most Read</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-recent" role="tab" aria-controls="profile">Most Recent</a>
+            <a class="list-group-item list-group-item-action" id="list-messages" data-toggle="list" href="#list-messages-list-viewed" role="tab" aria-controls="messages">Most Viewed</a>
+            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-settings-list-connected" role="tab" aria-controls="settings">Most Connected</a>
+            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-settings-list-discussed" role="tab" aria-controls="settings">Most Discussed</a>
+   
+      
+      <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Clubs</a>
+
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot"></span>
+            Goldwire F.C.
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-purple"></span>Bangladesh Gems</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+            Through the belts and roads
+          </a>  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-green"></span>
+            Middleast Gems
+          </a> 
+           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-pest"></span>
+           African Gems
+          </a> 
+           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-lyellow"></span>
+            Asian Gems
+          </a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-sweet"></span>
+            American Gems
+          </a>
+
+       <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">My Goldwire</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Bookmarks</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Connection Requests</a>
+               
+
+    </div>
+</div>
+
+  <div class="col-lg-10 col-md-12 c2 color-bg post-content">
+    <div class="tab-content" id="nav-tabContent ">
+    
+    
+
+
+
+      <div class="tab-pane fade show active"  id="list-home-feed" role="tabpanel" aria-labelledby="list-home-list">
+          
+          <div class="pb-4" style="position: relative;margin-top: 27px;left: 15px;">
+         <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
+         <p class="mt-2 mb-0 p-0 color-white f-14 master_text tag_text tc-purple">Bangladesh Gems</p>
+          
+         <p class="color-white" style="max-width: 97%;
+    margin: auto;">Shares of Bangladeshi sugar producers slipped in afternoon trade on a report that govt may increase fair and remunerative price (FRP) for sugarcane by 20 rupees to 275 rupees per quintalShares of Indian sugar producers slipped in afternoon trade on a report that govt may increase fair and remunerative price (FRP) for sugarcane by 20 rupees to 275 rupees per quintal
+         </p>
+         
+           
+          </div>
+
+           <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                    <a href="file:///C:/Users/User/Desktop/goldwire_2/tags.html" class="badge badge-purple">Through the belts and roads</a>
+                    <a href="#" class="badge badge-warning">Godlwire Fc</a>
+                    <a href="#" class="badge badge-danger">Middleast Gems</a>
+                    <a href="#" class="badge badge-warning">Asian Gems</a>
+                    <a href="#" class="badge badge-info">African Gems</a>
+                    <a href="#" class="badge badge-lgreen">American Gems</a>
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Share prices of five cos rise abnormally</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The share prices of five companies rose abnormally, although there is no undisclosed price sensitive information regarding the hikes.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>  
+        <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                    <a href="#" class="badge badge-purple">Primary</a>
+                    <a href="#" class="badge badge-danger">Primary</a>
+                    <a href="#" class="badge badge-warning">Primary</a>
+                    <a href="#" class="badge badge-info">Primary</a>
+                    <a href="#" class="badge badge-lgreen">Primary</a>
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Share prices of five cos rise abnormally</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The share prices of five companies rose abnormally, although there is no undisclosed price sensitive information regarding the hikes.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>
+          <div class="list-group " data-toggle="modal" data-target="#myModal2">
+               
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">US stocks rise as Microsoft gains</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message">US stocks rose on Friday as solid results from Microsoft lifted technology stocks and eased .</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </a>
+            
+        </div>
+            <div class="list-group" data-toggle="modal" data-target="#myModal2">
+               
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Chinese yuan slides, spooking Asian stocks, as trade war fears heighten</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The Chinese yuan skidded to one-year lows on Friday, shaking up Asian share markets and stoking concerns Beijing’s .</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </a>
+            
+        </div> 
+        <div class="list-group" data-toggle="modal" data-target="#myModal2">
+               
+                <a href="#" class="list-group-item feed-body">
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">US stocks close higher amid corporate earnings</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> Excluding the energy sector, the earnings growth estimate declines to 16.9 per cent, according to the latest statistics released by Thomson.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </a>
+            
+        </div>
+      </div>
+
+
+    <div class="tab-pane fade" id="list-profile-recent" role="tabpanel" aria-labelledby="list-profile-list"> 
+         <div  style="position: relative;margin-top: 27px;left: 15px;">
+         <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
+        
+          
+        
+          </div>
+               <div class="list-group w-100 opss_section" data-toggle="modal" data-target="#myModal2">
+                <h2 class="text-center"> 
+                     Oopss. You are not eligilbe to enter into this section.Please subscribe to enter this section.
+                    </h2> 
+                    
+                           
+               
+            
+        </div>
+
+          </div>
+
+         
+
+      </div>
+
+
+
+    <!--       Modal for right side -->
+    <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header border-0">
+          <p class="color-l-white" style="color: #EEE;font-size: 14px;padding: 6px 5px;white-space: pre-wrap;word-wrap: break-word;min-height: 20px;">Access from anywhere, anytime!</p>
+        <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+
+         
+        </div>
+        
+      
+      <div class="pl-4" >
+            <div class="d-inline">
+              <img src="img/icon.png" style=" width: 40px;background: #fff;" />
+            </div>
+
+           <div class="d-inline">  
+            <span class=" color-white" style="position: relative;top: -12px;left: 9px;">saasasasa@sasa</span>
+            <p class="float-right"><i style="color: #878787;position: relative;left: -13px;" class="fas fa-arrow-right"></i></p>
+           <p style="margin-left: 52px;margin-top: -19px;">
+              <i style="color: #878787;font-size: 12px" class="fas fa-flag"><span style="margin-left: 7px">Mon 16</span></i>
+              
+            </p>  
+          </div> 
+       </div>    
+        <div class="modal-body scrollable-panel">
+          <p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p> <p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p> <p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p><p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p><p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p><p class="color-l-white pl-17">Hello,
+            We created Goldwire, and its complementary mobile apps, to turn your monotonous email routine into an enjoyable experience. Never lose access to your email, wherever you are! 
+          </p>
+           <p class="color-l-white pl-17">
+             - Goldwire Team
+           </p>  
+        </div>
+
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+   </div> <!-- myModal2 -->
+
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+    </div>
+  </div>
+</div>
+</div>
+
+</section>
+
+
+   
+
+   <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "https://www.youtube.com/watch?v=CGw-dT-fs6w";
+    };
+</script>
+       
+    <!-- All JS libraries -->
+    <!-- JQUERY SLIM JS -->
+    <script src="libraries/jquery/jquery-3.2.1.slim.min.js"></script>
+    <!-- JQUERY Popper JS -->
+    <script src="libraries/jquery/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Summernote bs4 JS -->
+    <script src="libraries/nanobar.min.js"></script>
+    <script src="libraries/tab.js"></script>
+    <script src="libraries/loader/loader.js"></script>
+    <script src="js/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/dropdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- manin JS -->
+    <script src="js/main.js"></script>
+    <!-- Summernote cleaner JS -->
+
+</body>
+
+<script>
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block']
+    ]
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow'  // or 'bubble'
+});
+</script>
+</html>

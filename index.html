@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/components/transition.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="https://fonts.googleapis.com/css?family=Merienda|Passion+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="stylesheet" href="css/create_posts.css">
 <link rel="stylesheet" href="css/style.css">
 
@@ -46,149 +46,33 @@
 <!-- Image and text -->
 <header>
 <nav class="navbar navbar-light w-100% color-bg2">
-  <a class="navbar-brand" style="color: #c7c7c8;font-family: 'Concert One', cursive;" href="#">
+
+
+  <a class="navbar-brand" style="color: #c7c7c8;" href="#">
 <!--     <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
  -->    Goldwire
   </a>
-  <p class="float-right color-white">Faisal | Logout </p>
-</nav>
-<header class="site-header" role="banner">
-  <div class="search-wrap">
-      <div class="container">
-          <form action="" method="" role="search">
-              <input id="search-bar" placeholder="Search our website&hellip;">
+     <div class="float-right" style="position: relative;
+        top: 5px;">
+            <form class="d-inline">
+              <i class="fas fa-search" style="position: absolute;
+                left: -8px;
+                top: 7px;
+                z-index: 99;    color: #008ddd;"></i>
+               <input type="text" class="input_reddit" name="search" placeholder="Search">
             </form>
-        </div>
-    </div>
-   <div class="container">
-        <div class="nav-bar ">
-          <a href="javascript:;" class="toggle-search">Search</a>
-        </div>
-    </div>
-</header>
-</header>
 
-
-
-
-      <!-- Modal for New Post-->
-
-      <div class="container-fluid">
-        <div class="row">
- <!--  <div class="modal fade animation col-12 col-lg-10 offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog section " role="document">
-        <div class="modal-content color-l-bg ">
-          
-          <form name="task" id="task" action="">
-             <div class="modal-header border-0">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <div class="post_header">
-                <h1 class="main_header float-left main_header white-t">Create a post</h1>
-                <a class="draft float-right">Drafts<span class="draft_number">1</span></a>
-            </div>
-            </div>
-             
-           
-            <div class="scrollable-panel">
-              <div class="col-md-3 ui fluid search selection dropdown border-0">
-                <input type="hidden" class="input_reddit" name="country">
-                <i class="dropdown icon"></i>
-                <div class="default text reddit_search_text"> 
-                  
-                Select Targrt Audience
-                </div>
-                <div class="menu">
-                <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-                <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
-                <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
-               
-              </div>
-               </div>
-           
-           
-
-              <div id="textarea_hover_effect">
-                <div id="editor-container">
-                </div>
-              </div>
-              
-                <div class="field mtb-15">
-                  <label>Post Template</label>
-                  <div class="field mt-10">
-                      <div name="category" role="combobox" aria-expanded="false" class="ui fluid search selection dropdown">
-                        <input aria-autocomplete="list" autocomplete="off" class="search reddit-effect" tabindex="0" type="text" value="">
-                          <div class="text" role="alert" aria-live="polite"><span class="text">Technology</span></div>
-                             <i aria-hidden="true" class="dropdown ico "></i>
-                          <div role="listbox" class="menu transition hidden" tabindex="-1">
-                             <div role="option" aria-checked="true" aria-selected="true" class="item active selected" style="pointer-events: all;">
-                                 <span class="text">Technology</span>
-                             </div>
-                             <div role="option" aria-checked="false" aria-selected="false" class="item" style="pointer-events: all;">
-                                <span class="text">Bangladesh Ecommerce</span>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="sc-bdVaJa jwDCfa">
-                    <div style="padding-bottom: 25px;">
-                        <div>
-                           <h3 class="fw-500">Answer the following questions.</h3>
-                           <h4 class="fw-500" style="margin-top: -4px;">Technology</h4>
-                           <div class="ui equal width grid">
-                              <div class="column">
-                                <div class="ui form">
-                                         <div class="field">
-                                           <label class="fw-500">A question about the field?</label>
-                                          <div class="ui input"><input placeholder="A question about the field?" class="reddit-effect h-39" name="2" type="text">
-                                          </div>
-                                        </div>
-                                     </div>
-                                </div>
-                            </div>
-                            <div class="ui equal width grid" style="margin-top: 0px">
-                                <div class="column">
-                                    <div class="ui form">
-                                        <div class="field">
-                                            <label class="fw-500">Another question about the opportunity?</label><div class="ui slider checkbox">
-                                                 <input type="checkbox" name="newsletter" tabindex="0" class="hidden"><label></label></div>
-                                          </div>
-                                      </div>
-                                  </div>
-                             </div>
-                             <div class="ui equal width grid" style="margin-top: 0px">
-                                 <div class="column">
-                                    <div class="ui form">
-                                         <div class="field">
-                                           <label class="fw-500">Another question about the opportunity?</label>
-                                          <div class="ui input"><input placeholder="Another question about the opportunity?" class="reddit-effect h-39" name="2" type="text">
-                                          </div>
-                                        </div>
-                                     </div>
-                                   </div>
-                              </div>
-                            </div>
-                         </div>
-                      </div> 
-
-                <div style="float: right;">   
-                      <div class="d-inline">
-                            <button class="btn_reddit_post">Submit</button>
-                          </div>  
-                      </div>
-
-              
-                
-             
-                 <a class="btn btn-send color-b"><i class="fas fa-paper-plane color-b pr-2"></i>Send</a>
-        </form>
+        <p class="float-right color-l-white">Faisal | Logout </p>
       </div>
-        </div>
-      </div> -->
+</nav>
+</header>
 
+
+
+
+<!-- Modal for New Post-->
+<div class="container-fluid">
+  <div class="row">
     <div class="modal right fade  offset-lg-2 c-left-15" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
     <div class="modal-dialog" role="document">
       <div class="modal-content" style="width: 82.7%;top: 56px">
@@ -296,7 +180,7 @@
                       <div class="d-inline ">
                             <button class="btn_reddit_post mb-5">Submit</button>
                           </div>  
-                      </div>
+                </div>
 
               
                 
@@ -321,7 +205,7 @@
     <div class="list-group sp-padd pt-3" id="list-tab" role="tablist">
       <div class="btn-group dropright ">
         <button type="button" class="btn btn-secondary btn-blue border-0"  data-toggle="modal" data-target="#exampleModal">
-           Share a private opportunity
+           Share a opportunity
         </button>
         <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="sr-only">Toggle Dropright</span>
@@ -339,33 +223,37 @@
 
       <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Collections</a>
             <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home-feed" role="tab" aria-controls="home">Master Feed</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-read" role="tab" aria-controls="profile">Most Read</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-recent" role="tab" aria-controls="profile">Most Recent</a>
-            <a class="list-group-item list-group-item-action" id="list-messages" data-toggle="list" href="#list-messages-list-viewed" role="tab" aria-controls="messages">Most Viewed</a>
-            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-settings-list-connected" role="tab" aria-controls="settings">Most Connected</a>
-            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-settings-list-discussed" role="tab" aria-controls="settings">Most Discussed</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-read1" role="tab" aria-controls="profile">Most Read</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile-read2" role="tab" aria-controls="profile">Most Recent</a>
+            <a class="list-group-item list-group-item-action" id="list-messages" data-toggle="list" href="#list-profile-read" role="tab" aria-controls="messages">Most Viewed</a>
+            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-profile-read3" role="tab" aria-controls="settings">Most Connected</a>
+            <a class="list-group-item list-group-item-action" id="list-settings" data-toggle="list" href="#list-profile-read4" role="tab" aria-controls="settings">Most Discussed</a>
    
       
       <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Clubs</a>
+   
 
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot"></span>
-            Goldwire F.C.
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings-gems" role="tab" aria-controls="settings"><span class="dot c-purple"></span>Bangladesh Gems</a>
+
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-profile-none" role="tab" aria-controls="settings"><span class="dot"></span>
+             South American F.C.
           </a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-purple"></span>Bangladesh Gems</a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+          
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-profile-none" role="tab" aria-controls="settings"><span class="dot c-red"></span>
             Through the belts and roads
-          </a>  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-green"></span>
+          </a>  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-profile-none" role="tab" aria-controls="settings"><span class="dot c-green"></span>
             Middleast Gems
           </a> 
-           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-pest"></span>
-           African Gems
-          </a> 
-           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+           
+           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-profile-none" role="tab" aria-controls="settings"><span class="dot c-lyellow"></span>
             Asian Gems
           </a>
-          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><span class="dot c-red"></span>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-profile-recent" role="tab" aria-controls="settings"><span class="dot c-sweet"></span>
             American Gems
           </a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-profile-none" role="tab" aria-controls="settings"><span class="dot c-pest"></span>
+           African Gems
+          </a> 
 
        <a class="list-group-item list-group-item-action special-txt" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">My Goldwire</a>
           <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Bookmarks</a>
@@ -379,12 +267,10 @@
     <div class="tab-content" id="nav-tabContent ">
     
     
-
-
-
+     <!-- Bangladesh Gems-->
       <div class="tab-pane fade show active"  id="list-home-feed" role="tabpanel" aria-labelledby="list-home-list">
           
-          <div  style="position: relative;margin-top: 27px;left: 15px;">
+          <div  style="position: relative;margin-top: 27px;left: 15px;top: -6px;">
          <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
          <span class="mt-2 mb-0 p-0 color-white f-14 master_text">Master Feed</span>
           
@@ -402,12 +288,203 @@
                 <span href="#" class="list-group-item feed-body">
                  
                   <span class="ml-1 badge">
-                    <a href="#" class="badge badge-purple">Bangladesh Gems</a>
-                    <a href="#" class="badge badge-warning">Godlwire Fc</a>
-                    <a href="#" class="badge badge-danger">Middleast Gems</a>
-                    <a href="#" class="badge badge-warning">Asian Gems</a>
+                    <a href="tags.html" class="badge badge-purple">Bangladesh Gems</a>
+                    <a href="tags.html" class="badge badge-warning">South America Fc</a>
+                    <a href="tags.html" class="badge badge-danger">Through the belts and roadss</a>
+                   
+                  
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Share prices of five cos rise abnormally</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The share prices of five companies rose abnormally, although there is no undisclosed price sensitive information regarding the hikes.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>  <!-- list-group -->
+
+        <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                     <a href="tags.html" class="badge badge-info">African Gems</a>
+                    <a href="tags.html" class="badge badge-lgreen c-pest">American Gems</a>
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Asian shares higher on US earnings but trade worries </span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The dollar retreated from a three-week high as investors cashed in on gains the currency made after US Federal .</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>
+        <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                    <a href="tags.html" class="badge badge-warning">Asian Gems</a>
+                     <a href="tags.html" class="badge badge-danger c-green">Middleast Gems</a>
+                    <a href="tags.html" class="badge badge-purple">Bangladesh Gems</a>
+                    <a href="tags.html" class="badge badge-warning">South America Fc</a>  
+                  
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Share prices of five cos rise abnormally</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> The share prices of five companies rose abnormally, although there is no undisclosed price sensitive information regarding the hikes.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>  <!-- list-group -->
+    <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                   
+                    <a href="tags.html" class="badge badge-purple">Bangladesh Gems</a>
+                    <a href="tags.html" class="badge badge-warning">South America Fc</a>  
+                  
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">Oil prices rose 1.0 per cent overnight after US government data indicated bullish demand for gasoline</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> US crude last traded at $68.86 per barrel, up 0.15 per cent on the day, and Brent was at $72.82, down 0.11 per cent, in Asian trade.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>  <!-- list-group --> 
+     <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                    <a href="tags.html" class="badge badge-warning">Asian Gems</a>
+                     <a href="tags.html" class="badge badge-danger">Middleast Gems</a>
+                    <a href="tags.html" class="badge badge-purple">Bangladesh Gems</a>
+                    <a href="tags.html" class="badge badge-warning">South America Fc</a>  
+                  
+                  </span>
+                        
+                    
+
+                   <p class="m-0 f-14"> 
+                      <span class="pl-2 title">The dollar index against a basket of six major currencies, rose to a three-week high of 95.4 before settling</span>
+                   </p>
+                    <p class="name m-0 d-inline-block f-14">
+                            <span class="ml-2 message"> In his two-day congressional testimony, the Fed’s Powell said he believed the United States was on course for years more of steady growth.</span>
+                    </p> 
+                   
+                           
+                    <div class="d-inline-block float-right content_icons">
+                        <span class="f-14 date">june 9</span>
+                        <span class="rt-6"><i class="fas fa-edit m-bottom-icon icons"></i></span>
+                        
+                        <span class="rt-6"><i class="fas fa-trash-alt icons" ></i></span>
+                    </div>
+                           
+                </span>
+            
+        </div>  <!-- list-group -->
+
+      </div><!-- bd gems-->
+
+
+
+
+    <!-- <most recent tab -->
+    <div class="tab-pane fade" id="list-profile-none" role="tabpanel" aria-labelledby="list-profile-list"> 
+               <div  style="position: relative;margin-top: 27px;left: 15px;"></div>
+                     <div class="list-group w-100 opss_section" data-toggle="modal" data-target="#myModal2">
+                      <h2 class="text-center"> 
+                           Oopss. You nedd to be a super user to access this section.Please be a super user.
+                          </h2>                
+                     </div>
+     </div> <!-- <most recent tab -->
+      
+
+      <!--  Most profile read1     -->
+       <div class="tab-pane fade" id="list-profile-none" role="tabpanel" aria-labelledby="list-profile-read"> 
+       <!--  Bangladesh  Gems sidebar click -->
+         <div class="tab-pane fade" id="list-settings-gems" role="tabpanel" aria-labelledby="list-profile-list"> 
+                 <div  style="position: relative;margin-top: 27px;left: 15px;">
+         <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
+         <span class="mt-2 mb-0 p-0 color-white f-14 master_text">Master Feed</span>
+          
+          <span class="float-right super_text">
+            <span class="color-white super_text_label">Super User</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round" id="myButton"></span>
+            </label>
+          </span>  
+          </div>
+
+           <div class="list-group w-100" data-toggle="modal" data-target="#myModal2">
+               
+                <span href="#" class="list-group-item feed-body">
+                 
+                  <span class="ml-1 badge">
+                     <a href="#" class="badge badge-warning">Asian Gems</a>
                     <a href="#" class="badge badge-info">African Gems</a>
                     <a href="#" class="badge badge-lgreen">American Gems</a>
+                    <a href="tags.html" class="badge badge-purple">Bangladesh Gems</a>
+                    <a href="#" class="badge badge-warning">Godlwire Fc</a>
+                    <a href="#" class="badge badge-danger">Middleast Gems</a>               
                   </span>
                         
                     
@@ -482,7 +559,7 @@
                            
                 </a>
             
-        </div>
+           </div>
             <div class="list-group" data-toggle="modal" data-target="#myModal2">
                
                 <a href="#" class="list-group-item feed-body">
@@ -525,30 +602,7 @@
                 </a>
             
         </div>
-      </div>
-
-
-    <div class="tab-pane fade" id="list-profile-recent" role="tabpanel" aria-labelledby="list-profile-list"> 
-         <div  style="position: relative;margin-top: 27px;left: 15px;">
-         <!-- <i class="fas fa-envelope-open mail-icon"></i><span class="skew-style">Mail</span> -->
-        
-          
-        
-          </div>
-               <div class="list-group w-100 opss_section" data-toggle="modal" data-target="#myModal2">
-                <h2 class="text-center"> 
-                     Oopss. You are not eligilbe to enter into this section.Please subscribe to enter this section.
-                    </h2> 
-                    
-                           
-               
-            
-        </div>
-
-          </div>
-
-         
-
+          </div> <!--  Bangladesh  Gems sidebar click -->
       </div>
 
 
@@ -606,9 +660,10 @@
     </div><!-- modal-dialog -->
    </div> <!-- myModal2 -->
 
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+      <div class="tab-pane fade" id="list-profile-read1" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+      <div class="tab-pane fade" id="list-profile-read2" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+      <div class="tab-pane fade" id="list-profile-read3" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+       <div class="tab-pane fade" id="list-profile-read4" role="tabpanel" aria-labelledby="list-settings-list">...</div>
     </div>
   </div>
 </div>
@@ -621,7 +676,7 @@
 
    <script type="text/javascript">
     document.getElementById("myButton").onclick = function () {
-        location.href = "https://www.youtube.com/watch?v=CGw-dT-fs6w";
+        location.href = "file:///C:/Users/User/Desktop/goldwire_2/super.html";
     };
 </script>
        
